@@ -50,7 +50,7 @@ function Sponsorship() {
   return (
     <div className="w-full pb-0 relative">
       {/* 1. Hero Section */}
-      <section className="relative w-full overflow-hidden bg-brand-dark pt-20 pb-28 md:pt-32 md:pb-40 px-6 rounded-b-[40px] md:rounded-b-[64px] mb-16 md:mb-24">
+      <section className="relative mx-4 md:mx-10 lg:mx-20 max-w-[1400px] xl:mx-auto overflow-hidden bg-brand-dark pt-20 pb-28 md:pt-32 md:pb-40 px-6 mt-4 md:mt-0 rounded-[32px] md:rounded-t-none md:rounded-b-[64px] mb-16 md:mb-24">
         <BackgroundGrid opacity={10} dotColor="#ffffff" patternSize={30} fadeEdges={true} />
         <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
           <Reveal direction="down" delay={100}>

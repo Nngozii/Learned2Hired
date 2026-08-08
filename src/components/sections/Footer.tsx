@@ -6,7 +6,7 @@ function Footer() {
              <div className="md:hidden bg-brand-light rounded-t-[2rem] pt-8 pb-8 px-6 flex flex-col items-center">
         <h3 className="text-brand-dark text-xl font-bold mb-6">Contact Us</h3>
         <div className="flex justify-between w-full px-2">
-          <a href="#" className="flex flex-col items-center gap-2 text-brand-dark font-semibold">
+          <a href="mailto:hello@learned2hired.com" className="flex flex-col items-center gap-2 text-brand-dark font-semibold">
             <Mail size={24} strokeWidth={2.5} className="text-[#2D459D]" />
             <span className="text-[13px]">Email</span>
           </a>
@@ -14,7 +14,7 @@ function Footer() {
             <MessageCircle size={24} strokeWidth={2.5} className="text-[#2D459D]" />
             <span className="text-[13px]">Whatsapp</span>
           </a>
-          <a href="#" className="flex flex-col items-center gap-2 text-brand-dark font-semibold">
+          <a href="tel:+2349078632032" className="flex flex-col items-center gap-2 text-brand-dark font-semibold">
             <Phone size={24} strokeWidth={2.5} className="text-[#2D459D]" />
             <span className="text-[13px]">Call</span>
           </a>
@@ -38,22 +38,15 @@ function Footer() {
             <p className="text-white text-xs font-semibold mt-2">
                 Turning skills into career
             </p>
-            
-            <div className="flex items-center gap-2 mt-4 text-brand-dark">
-                <a href="#" className="bg-white p-1.5 rounded-full"><Phone size={14} fill="currentColor" strokeWidth={0} /></a>
-                <a href="#" className="bg-white p-1.5 rounded-full"><Phone size={14} fill="currentColor" strokeWidth={0} /></a>
-                <a href="#" className="bg-white p-1.5 rounded-full"><Phone size={14} fill="currentColor" strokeWidth={0} /></a>
-                <a href="#" className="bg-white p-1.5 rounded-full"><MessageCircle size={14} fill="currentColor" strokeWidth={0} /></a>
-            </div>
         </div>
         
         <div className="pl-4">
             <h4 className='font-semibold text-white text-base'>Quick Link</h4>
-            <ul className='flex flex-col gap-1'>
-                <li><Link to="/about" className='text-brand-light text-xs'>About Us</Link></li>
-                <li><Link to="/request-talent" className='text-brand-light text-xs'>Hire Talent</Link></li>
-                <li><Link to="/join-talent-pool" className='text-brand-light text-xs'>Join Talent Pool</Link></li>
-                <li><Link to="/sponsorship" className='text-brand-light text-xs'>Sponsorship</Link></li>
+            <ul className='flex flex-col gap-2'>
+                <li><Link to="/about" className='text-brand-light text-[13px]'>About Us</Link></li>
+                <li><Link to="/request-talent" className='text-brand-light text-[13px]'>Hire Talent</Link></li>
+                <li><Link to="/join-talent-pool" className='text-brand-light text-[13px]'>Join Talent Pool</Link></li>
+                <li><Link to="/sponsorship" className='text-brand-light text-[13px]'>Sponsorship</Link></li>
             </ul>
         </div>
     </div>
@@ -75,28 +68,28 @@ function Footer() {
 
                 <div>
                     <h4 className='text-brand-dark font-bold mb-4'>For Candidates</h4>
-                    <ul className='text-brand-primary flex flex-col gap-1'>
-                        <li><Link to="/join-talent-pool">Join Talent Pool</Link></li>
-                        <li><a href="/#howitworks">How it works</a></li>
+                    <ul className='text-brand-dark/80 flex flex-col gap-2 text-[15px]'>
+                        <li><Link to="/join-talent-pool" className="hover:text-brand-primary hover:underline hover:font-bold transition-all">Join Talent Pool</Link></li>
+                        <li><a href="/#howitworks" className="hover:text-brand-primary hover:underline hover:font-bold transition-all">How it works</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 className='text-brand-dark font-bold mb-4'>For Companies</h4>
-                    <ul className='text-brand-primary flex flex-col gap-1'>
-                        <li><Link to="/request-talent">Hire Talent</Link></li>
-                        <li><a href="/#howitworks">How it works</a></li>
-                        <li><Link to="/sponsorship">Sponsorship</Link></li>
+                    <ul className='text-brand-dark/80 flex flex-col gap-2 text-[15px]'>
+                        <li><Link to="/request-talent" className="hover:text-brand-primary hover:underline hover:font-bold transition-all">Hire Talent</Link></li>
+                        <li><a href="/#howitworks" className="hover:text-brand-primary hover:underline hover:font-bold transition-all">How it works</a></li>
+                        <li><Link to="/sponsorship" className="hover:text-brand-primary hover:underline hover:font-bold transition-all">Sponsorship</Link></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 className='text-brand-dark font-bold mb-4'>Contact Us</h4>
-                    <ul className='text-brand-primary flex flex-col gap-1'>
-                        <li><a href="mailto:hello@learned2hired.com" className="flex items-center gap-2"><Mail size={16} strokeWidth={3} /> hello@learned2hired.com</a></li>
-                        <li><a href="#" className="flex items-center gap-2"><Phone size={16} strokeWidth={3} /> +234 9078632032</a></li>
-                        <li><a href="https://whatsapp.com/channel/0029VazWeLyKLaHlKsDfoe0H" target="_blank" rel="noreferrer" className="flex items-center gap-2"><MessageCircle size={16} strokeWidth={3} /> WhatsApp Channel</a></li>
-                        <li><a href="#" className="flex items-center gap-2"><MapPin size={16} strokeWidth={3} /> Lagos, Nigeria</a></li>
+                    <ul className='text-brand-dark/80 flex flex-col gap-2 text-[15px]'>
+                        <li><a href="mailto:hello@learned2hired.com" className="flex items-center gap-2 hover:text-brand-primary hover:underline hover:font-bold transition-all"><Mail size={16} strokeWidth={2.5} /> hello@learned2hired.com</a></li>
+                        <li><a href="tel:+2349078632032" className="flex items-center gap-2 hover:text-brand-primary hover:underline hover:font-bold transition-all"><Phone size={16} strokeWidth={2.5} /> +234 9078632032</a></li>
+                        <li><a href="https://whatsapp.com/channel/0029VazWeLyKLaHlKsDfoe0H" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-brand-primary hover:underline hover:font-bold transition-all"><MessageCircle size={16} strokeWidth={2.5} /> WhatsApp Channel</a></li>
+                        <li><a href="#" className="flex items-center gap-2 hover:text-brand-primary hover:underline hover:font-bold transition-all"><MapPin size={16} strokeWidth={2.5} /> Lagos, Nigeria</a></li>
                     </ul>
                 </div>
             </div>
