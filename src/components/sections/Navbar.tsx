@@ -55,9 +55,11 @@ function Navbar() {
               </ul>
           </div>
 
-          <Button to="/join-talent-pool" className='hidden md:inline-flex px-10 py-3 rounded-xl hover:shadow-lg'>
-              Join Talent Pool
-          </Button>
+          <div className="hidden md:block">
+            <Button to="/join-talent-pool" className='px-10 py-3 rounded-xl hover:shadow-lg'>
+                Join Talent Pool
+            </Button>
+          </div>
 
           <button 
             className="block md:hidden text-brand-primary cursor-pointer hover:opacity-70 transition-opacity"

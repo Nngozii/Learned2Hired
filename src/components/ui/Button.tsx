@@ -6,9 +6,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   to?: string;
   href?: string;
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
-export function Button({ children, to, href, className = '', ...props }: ButtonProps) {
+export function Button({ children, to, href, className = '', target, rel, ...props }: ButtonProps) {
   const isWhiteButton = className.includes('bg-white') || className.includes('bg-brand-light');
   
   const [hoverColor, setHoverColor] = useState(isWhiteButton ? '#244299' : '#FFFFFF');
@@ -79,7 +81,7 @@ export function Button({ children, to, href, className = '', ...props }: ButtonP
 
   if (href) {
     return (
-      <a href={href} className={baseClasses} onMouseEnter={handleMouseEnter}>
+      <a href={href} target={target} rel={rel} className={baseClasses} onMouseEnter={handleMouseEnter}>
         {content}
       </a>
     );

@@ -2,6 +2,7 @@
 import { FileUp, UserSearch, HeartHandshake, ClipboardList, Users, Briefcase, UserCheck, ShieldCheck, Clock, Handshake } from 'lucide-react'
 import { Reveal } from '../ui/Reveal'
 import { SpotlightCard } from '../ui/SpotlightCard'
+import { Carousel } from '../ui/Carousel'
 
 function HowItWorks() {
   const candidatesSteps = [
@@ -24,7 +25,7 @@ function HowItWorks() {
   ];
 
   return (
-    <section id="howitworks" className="py-10 md:py-20 px-4 md:px-10 lg:px-20 max-w-[1400px] mx-auto overflow-hidden">
+    <section id="howitworks" className="py-10 md:py-20 px-4 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
       <Reveal>
         <h2 className="text-center text-brand-dark text-[28px] md:text-3xl font-bold mb-10 md:mb-16">
           How It Works
@@ -38,21 +39,20 @@ function HowItWorks() {
           </div>
         </Reveal>
         
-        <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-4 pb-4 md:pb-0 scrollbar-hide snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {candidatesSteps.map((step, idx) => (
-            <Reveal key={idx} delay={idx * 150} className="min-w-[85%] sm:min-w-[60%] md:min-w-0 snap-center">
-              <SpotlightCard className="h-full bg-[#F8FBFF] border-[#D2DCF6] p-6 shadow-sm">
-                <div className="flex items-start gap-3 mb-3">
-                  <step.icon className="text-brand-dark shrink-0 mt-0.5" size={20} strokeWidth={2} />
-                  <h4 className="text-brand-dark font-bold text-[15px] leading-tight pr-4">{step.title}</h4>
-                </div>
-                <p className="text-brand-primary text-[13px] leading-[1.6] opacity-90 pl-8 md:pl-0">
-                  {step.text}
-                </p>
-              </SpotlightCard>
-            </Reveal>
-          ))}
-        </div>
+        <Carousel 
+          desktopGridClasses="md:grid md:grid-cols-3 gap-4"
+          items={candidatesSteps.map((step, idx) => (
+            <SpotlightCard key={idx} className="h-full bg-[#F8FBFF] border-[#D2DCF6] p-6 shadow-sm">
+              <div className="flex items-start gap-3 mb-3">
+                <step.icon className="text-brand-dark shrink-0 mt-0.5" size={20} strokeWidth={2} />
+                <h4 className="text-brand-dark font-bold text-[15px] leading-tight pr-4">{step.title}</h4>
+              </div>
+              <p className="text-brand-primary text-[13px] leading-[1.6] opacity-90 pl-8 md:pl-0">
+                {step.text}
+              </p>
+            </SpotlightCard>
+          ))} 
+        />
       </div>
 
       <div className="relative mb-10">
@@ -62,21 +62,20 @@ function HowItWorks() {
           </div>
         </Reveal>
         
-        <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-4 pb-4 md:pb-5 scrollbar-hide snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {companiesSteps.map((step, idx) => (
-            <Reveal key={idx} delay={idx * 150} className="min-w-[85%] sm:min-w-[60%] md:min-w-0 snap-center">
-              <SpotlightCard className="h-full bg-[#F8FBFF] border-[#D2DCF6] p-6 shadow-sm">
-                <div className="flex items-start gap-3 mb-3">
-                  <step.icon className="text-brand-dark shrink-0 mt-0.5" size={20} strokeWidth={2} />
-                  <h4 className="text-brand-dark font-bold text-[15px] leading-tight pr-4">{step.title}</h4>
-                </div>
-                <p className="text-brand-primary text-[13px] leading-[1.6] opacity-90 pl-8 md:pl-0">
-                  {step.text}
-                </p>
-              </SpotlightCard>
-            </Reveal>
+        <Carousel 
+          desktopGridClasses="md:grid md:grid-cols-3 gap-4"
+          items={companiesSteps.map((step, idx) => (
+            <SpotlightCard key={idx} className="h-full bg-[#F8FBFF] border-[#D2DCF6] p-6 shadow-sm">
+              <div className="flex items-start gap-3 mb-3">
+                <step.icon className="text-brand-dark shrink-0 mt-0.5" size={20} strokeWidth={2} />
+                <h4 className="text-brand-dark font-bold text-[15px] leading-tight pr-4">{step.title}</h4>
+              </div>
+              <p className="text-brand-primary text-[13px] leading-[1.6] opacity-90 pl-8 md:pl-0">
+                {step.text}
+              </p>
+            </SpotlightCard>
           ))}
-        </div>
+        />
       </div>
 
       <Reveal direction="up" delay={200}>
@@ -85,24 +84,24 @@ function HowItWorks() {
             Why Work With Us?
           </h2>
           
-          <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 pb-4 md:pb-0 scrollbar-hide snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {whyWorkWithUs.map((item, idx) => (
-              <Reveal key={idx} delay={idx * 100} className="min-w-[75%] sm:min-w-[45%] md:min-w-0 snap-center">
-                <SpotlightCard 
-                  spotlightColor="rgba(255,255,255,0.15)"
-                  className="h-full bg-[#112358] border-transparent text-white p-6 flex flex-col items-center text-center shadow-lg"
-                >
-                  <div className="mb-5 flex justify-center">
-                    <item.icon size={36} strokeWidth={1.5} className="text-white" />
-                  </div>
-                  <h4 className="font-bold text-[16px] mb-3 text-center">{item.title}</h4>
-                  <p className="text-[13px] opacity-80 leading-[1.6] max-w-[200px] mx-auto text-center">
-                    {item.text}
-                  </p>
-                </SpotlightCard>
-              </Reveal>
+          <Carousel 
+            desktopGridClasses="md:grid md:grid-cols-2 lg:grid-cols-4 gap-4"
+            items={whyWorkWithUs.map((item, idx) => (
+              <SpotlightCard 
+                key={idx}
+                spotlightColor="rgba(255,255,255,0.15)"
+                className="h-full bg-[#112358] border-transparent text-white p-6 flex flex-col items-center text-center shadow-lg"
+              >
+                <div className="mb-5 flex justify-center">
+                  <item.icon size={36} strokeWidth={1.5} className="text-white" />
+                </div>
+                <h4 className="font-bold text-[16px] mb-3 text-center">{item.title}</h4>
+                <p className="text-[13px] opacity-80 leading-[1.6] max-w-[200px] mx-auto text-center">
+                  {item.text}
+                </p>
+              </SpotlightCard>
             ))}
-          </div>
+          />
         </div>
       </Reveal>
     </section>

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { BackgroundGrid } from '../ui/BackgroundGrid';
 
 interface SplitPageLayoutProps {
   mobileHeader: ReactNode;
@@ -14,23 +15,12 @@ export default function SplitPageLayout({ mobileHeader, desktopHeader, children,
         
         <div className="hidden md:flex w-[30%] lg:w-[35%] shrink-0 items-center justify-center p-10 relative overflow-hidden">
           {/* Abstract Data-Inspired Background Graphic */}
-          <div className="absolute inset-0 w-full h-full opacity-30 pointer-events-none z-0">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="1.5" fill="#ffffff" />
-                </pattern>
-                <radialGradient id="gradFade" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="white" stopOpacity="1" />
-                  <stop offset="80%" stopColor="white" stopOpacity="0" />
-                </radialGradient>
-                <mask id="fadeMask">
-                  <rect width="100%" height="100%" fill="url(#gradFade)" />
-                </mask>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#dotGrid)" mask="url(#fadeMask)" />
-            </svg>
-          </div>
+          <BackgroundGrid 
+            opacity={30} 
+            dotColor="#ffffff" 
+            patternSize={24} 
+            fadeEdges={true} 
+          />
           {/* Content */}
           <div className="z-10 relative w-full flex justify-center">
             {leftContent}
