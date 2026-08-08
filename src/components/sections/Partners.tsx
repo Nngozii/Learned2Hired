@@ -1,4 +1,3 @@
-import React from 'react'
 
 function Partners() {
   return (
@@ -7,11 +6,11 @@ function Partners() {
             Proud to Partner With
         </h3>
         
-        <div className="flex justify-center items-center gap-5 flex-wrap">
-            <img src="/microsoft.png" alt="Microsoft" className="h-8 grayscale opacity-70" />
-            <img src="/google-cloud.png" alt="Google Cloud" className="h-8 grayscale opacity-70" />
-            <img src="/power-bi.png" alt="Power BI" className="h-8 grayscale opacity-70" />
-            <img src="/tableau.png" alt="Tableau" className="h-8 grayscale opacity-70" />
+        <div className="flex justify-center items-center gap-8 md:gap-16 flex-wrap">
+            <img src="/microsoft.png" alt="Microsoft" className="h-6 md:h-12 object-contain" />
+            <img src="/googlecloud.png" alt="Google Cloud" className="h-6 md:h-15 object-contain" />
+            <img src="/powerbi.png" alt="Power BI" className="h-6 md:h-15 object-contain" />
+            <img src="/tableau.png" alt="Tableau" className="h-6 md:h-15 object-contain" />
         </div>
     </section>
   )
