@@ -8,7 +8,7 @@ function HowItWorks() {
   const candidatesSteps = [
     { title: "Submit your CV", text: "Fill out the form and upload your CV to join our talent pool.", icon: FileUp },
     { title: "We Review Your Profile", text: "Our team reviews your experience and skills to understand your strengths.", icon: UserSearch },
-    { title: "Get Matched with Opportunities", text: "Fill out the form and upload your CV to join our talent pool.", icon: HeartHandshake }
+    { title: "Get Matched with Opportunities", text: "We connect you with top companies hiring for roles that perfectly align with your expertise.", icon: HeartHandshake }
   ];
 
   const companiesSteps = [

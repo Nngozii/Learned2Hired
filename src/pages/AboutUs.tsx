@@ -9,7 +9,7 @@ import { Reveal } from '../components/ui/Reveal';
 function AboutUs() {
   return (
     <div className="w-full relative overflow-hidden">
-      <BackgroundGrid opacity={20} />
+      <BackgroundGrid opacity={30} />
 
       <div className="max-w-[1400px] mx-auto px-3 md:px-10 lg:px-20 pt-8 md:pt-16 pb-16 relative z-10">
         
