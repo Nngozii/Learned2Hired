@@ -1,100 +1,110 @@
-import React from 'react'
-import { FileUp, UserSearch, ClipboardList, Users } from 'lucide-react'
+
+import { FileUp, UserSearch, HeartHandshake, ClipboardList, Users, Briefcase, UserCheck, ShieldCheck, Clock, Handshake } from 'lucide-react'
+import { Reveal } from '../ui/Reveal'
+import { SpotlightCard } from '../ui/SpotlightCard'
 
 function HowItWorks() {
+  const candidatesSteps = [
+    { title: "Submit your CV", text: "Fill out the form and upload your CV to join our talent pool.", icon: FileUp },
+    { title: "We Review Your Profile", text: "Our team reviews your experience and skills to understand your strengths.", icon: UserSearch },
+    { title: "Get Matched with Opportunities", text: "Fill out the form and upload your CV to join our talent pool.", icon: HeartHandshake }
+  ];
+
+  const companiesSteps = [
+    { title: "Tell Us Your Need", text: "Share your requirements and the type of Data Analyst you're looking for", icon: ClipboardList },
+    { title: "We Shortlist Qualified Talent Profile", text: "We handpick and match you with the best candidates from our pool.", icon: Users },
+    { title: "You interview & Hire", text: "You meet the candidates we recommend and make the best hiring decisions.", icon: Briefcase }
+  ];
+
+  const whyWorkWithUs = [
+    { title: "Curated Talent Pool", text: "We carefully screen and curate skilled Data Professionals.", icon: UserCheck },
+    { title: "Verified Professionals", text: "Access a network of pre-vested and qualified data professionals.", icon: ShieldCheck },
+    { title: "Save Time and Resources", text: "We handle the search so you can focus on what matters.", icon: Clock },
+    { title: "Trusted by Many", text: "Startups, SMEs, and organizations trust us for their hiring needs.", icon: Handshake }
+  ];
+
   return (
-    <section className="py-5 md:py-10 px-4 md:px-20 max-w-7xl mx-auto">
-      {/* How It Works Header */}
-      <h2 className="text-center text-brand-dark font-bold text-[20px] mb-8">
-        How It Works
-      </h2>
-
-      {/* For Candidates Section */}
-      <div className="mb-8">
-        <div className="inline-block bg-[#F4F7FF] text-brand-dark px-3 py-1 rounded-md text-[10px] font-bold mb-3">
-          For Candidates
-        </div>
-        
-        <div className="grid grid-cols-2 gap-3">
-          {/* Card 1 */}
-          <div className="bg-[#F8FBFF] rounded-xl p-3 shadow-sm flex flex-col justify-start">
-            <div className="flex items-start gap-1.5 mb-2">
-              <FileUp className="text-brand-dark shrink-0" size={14} strokeWidth={2.5} />
-              <h4 className="text-brand-dark font-bold text-[11px] leading-tight mt-[1px]">Submit your CV</h4>
-            </div>
-            <p className="text-brand-primary text-[9.5px] leading-[1.4]">
-              Fill out the form and upload your CV to join our taent pool.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-[#F8FBFF] rounded-xl p-3 shadow-sm flex flex-col justify-start">
-            <div className="flex items-start gap-1.5 mb-2">
-              <UserSearch className="text-brand-dark shrink-0" size={14} strokeWidth={2.5} />
-              <h4 className="text-brand-dark font-bold text-[11px] leading-tight mt-[1px]">We Review You...</h4>
-            </div>
-            <p className="text-brand-primary text-[9.5px] leading-[1.4]">
-              Our team reviews your experience and skills to understand your strengths
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* For Companies Section */}
-      <div className="mb-12">
-        <div className="inline-block bg-[#F4F7FF] text-brand-dark px-3 py-1 rounded-md text-[10px] font-bold mb-3">
-          For Companies
-        </div>
-        
-        <div className="grid grid-cols-2 gap-3">
-          {/* Card 1 */}
-          <div className="bg-[#F8FBFF] rounded-xl p-3 shadow-sm flex flex-col justify-start">
-            <div className="flex items-start gap-1.5 mb-2">
-              <ClipboardList className="text-brand-dark shrink-0" size={14} strokeWidth={2.5} />
-              <h4 className="text-brand-dark font-bold text-[11px] leading-tight mt-[1px]">Tell Us Your Need</h4>
-            </div>
-            <p className="text-brand-primary text-[9.5px] leading-[1.4]">
-              Share your requirements and the type of Data Analyst you're looking for
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-[#F8FBFF] rounded-xl p-3 shadow-sm flex flex-col justify-start">
-            <div className="flex items-start gap-1.5 mb-2">
-              <Users className="text-brand-dark shrink-0" size={14} strokeWidth={2.5} />
-              <h4 className="text-brand-dark font-bold text-[11px] leading-tight mt-[1px]">We Shortlist Q...</h4>
-            </div>
-            <p className="text-brand-primary text-[9.5px] leading-[1.4]">
-              Our team reviews your experience and skills to understand your strengths
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Why Work With Us Section */}
-      <div className="mb-5">
-        <h2 className="text-center text-brand-dark font-bold text-[20px] mb-6">
-          Why Work With Us?
+    <section id="howitworks" className="py-10 md:py-20 px-4 md:px-10 lg:px-20 max-w-[1400px] mx-auto overflow-hidden">
+      <Reveal>
+        <h2 className="text-center text-brand-dark text-[28px] md:text-3xl font-bold mb-10 md:mb-16">
+          How It Works
         </h2>
-        
-        <div className="grid grid-cols-2 gap-3">
-          {/* Card 1 */}
-          <div className="bg-[#F8FBFF] rounded-xl p-3 shadow-sm flex flex-col justify-start">
-            <h4 className="text-brand-dark font-bold text-[11px] mb-2 leading-tight">1. Submit your CV</h4>
-            <p className="text-brand-primary text-[9.5px] leading-[1.4]">
-              Fill out the form and upload your CV to join our taent pool.
-            </p>
-          </div>
+      </Reveal>
 
-          {/* Card 2 */}
-          <div className="bg-[#F8FBFF] rounded-xl p-3 shadow-sm flex flex-col justify-start">
-            <h4 className="text-brand-dark font-bold text-[11px] mb-2 leading-tight">2. We Review You...</h4>
-            <p className="text-brand-primary text-[9.5px] leading-[1.4]">
-              Our team reviews your experience and skills to understand your strengths
-            </p>
+      <div className="relative mb-8">
+        <Reveal direction="left" className="relative z-20">
+          <div className="md:absolute md:-top-[12px] md:left-6 inline-block bg-white border border-[#B3C0E7] text-[#2D459D] px-3 py-[2px] rounded-full text-[10px] md:text-[11px] font-bold mb-3 md:mb-0 z-10">
+            For Candidates
           </div>
+        </Reveal>
+        
+        <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-4 pb-4 md:pb-0 scrollbar-hide snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {candidatesSteps.map((step, idx) => (
+            <Reveal key={idx} delay={idx * 150} className="min-w-[85%] sm:min-w-[60%] md:min-w-0 snap-center">
+              <SpotlightCard className="h-full bg-[#F8FBFF] border-[#D2DCF6] p-6 shadow-sm">
+                <div className="flex items-start gap-3 mb-3">
+                  <step.icon className="text-brand-dark shrink-0 mt-0.5" size={20} strokeWidth={2} />
+                  <h4 className="text-brand-dark font-bold text-[15px] leading-tight pr-4">{step.title}</h4>
+                </div>
+                <p className="text-brand-primary text-[13px] leading-[1.6] opacity-90 pl-8 md:pl-0">
+                  {step.text}
+                </p>
+              </SpotlightCard>
+            </Reveal>
+          ))}
         </div>
       </div>
+
+      <div className="relative mb-10">
+        <Reveal direction="left" className="relative z-20">
+          <div className="md:absolute md:-top-[12px] md:left-6 inline-block bg-white border border-[#B3C0E7] text-[#2D459D] px-3 py-[2px] rounded-full text-[10px] md:text-[11px] font-bold mb-3 md:mb-0 z-10">
+            For Companies
+          </div>
+        </Reveal>
+        
+        <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-4 pb-4 md:pb-5 scrollbar-hide snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {companiesSteps.map((step, idx) => (
+            <Reveal key={idx} delay={idx * 150} className="min-w-[85%] sm:min-w-[60%] md:min-w-0 snap-center">
+              <SpotlightCard className="h-full bg-[#F8FBFF] border-[#D2DCF6] p-6 shadow-sm">
+                <div className="flex items-start gap-3 mb-3">
+                  <step.icon className="text-brand-dark shrink-0 mt-0.5" size={20} strokeWidth={2} />
+                  <h4 className="text-brand-dark font-bold text-[15px] leading-tight pr-4">{step.title}</h4>
+                </div>
+                <p className="text-brand-primary text-[13px] leading-[1.6] opacity-90 pl-8 md:pl-0">
+                  {step.text}
+                </p>
+              </SpotlightCard>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+
+      <Reveal direction="up" delay={200}>
+        <div className="bg-[#F8FBFF] rounded-[24px] md:rounded-[32px] p-1 md:p-12 lg:p-16">
+          <h2 className="text-center text-brand-dark text-[24px] md:text-3xl font-bold mb-8 md:mb-12">
+            Why Work With Us?
+          </h2>
+          
+          <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 pb-4 md:pb-0 scrollbar-hide snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {whyWorkWithUs.map((item, idx) => (
+              <Reveal key={idx} delay={idx * 100} className="min-w-[75%] sm:min-w-[45%] md:min-w-0 snap-center">
+                <SpotlightCard 
+                  spotlightColor="rgba(255,255,255,0.15)"
+                  className="h-full bg-[#112358] border-transparent text-white p-6 flex flex-col items-center text-center shadow-lg"
+                >
+                  <div className="mb-5 flex justify-center">
+                    <item.icon size={36} strokeWidth={1.5} className="text-white" />
+                  </div>
+                  <h4 className="font-bold text-[16px] mb-3 text-center">{item.title}</h4>
+                  <p className="text-[13px] opacity-80 leading-[1.6] max-w-[200px] mx-auto text-center">
+                    {item.text}
+                  </p>
+                </SpotlightCard>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </Reveal>
     </section>
   )
 }
